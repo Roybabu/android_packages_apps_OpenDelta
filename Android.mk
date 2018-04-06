@@ -15,7 +15,6 @@ LOCAL_STATIC_JAVA_LIBRARIES += android-support-v4
 LOCAL_AAPT_FLAGS := --auto-add-overlay \
     --extra-packages android.support.v7.cardview
 
-LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 LOCAL_JNI_SHARED_LIBRARIES := libopendelta
 LOCAL_REQUIRED_MODULES := libopendelta
 LOCAL_PROGUARD_FLAG_FILES := proguard-project.txt
