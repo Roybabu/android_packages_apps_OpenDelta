@@ -251,7 +251,7 @@ int zipadjust(char* filenameIn, char* filenameOut, int decompress) {
 
 				filename[central_header->length_filename] = (char)0;
 				memcpy(filename, &central_directory_in[central_directory_in_index + sizeof(central_header_t)], central_header->length_filename);
-				printf("%s (%d --> %d) [%08X] (%d)\n", filename, central_header->size_uncompressed, central_header->size_compressed, central_header->crc32, central_header->length_extra + central_header->length_comment);
+				printf("%s (%u --> %u) [%08X] (%u)\n", filename, central_header->size_uncompressed, central_header->size_compressed, central_header->crc32, central_header->length_extra + central_header->length_comment);
 
 				local_header_t local_header;
 				if (!xseekread(fin, central_header->offset, &local_header, sizeof(local_header_t))) return 0;
